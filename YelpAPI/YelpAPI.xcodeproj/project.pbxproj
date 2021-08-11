@@ -3,13 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B0BA274D26C44DB70061A02A /* YelpAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BA274326C44DB70061A02A /* YelpAPI.framework */; };
 		B0BA275226C44DB70061A02A /* YelpAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA275126C44DB70061A02A /* YelpAPITests.swift */; };
 		B0BA275426C44DB70061A02A /* YelpAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B0BA274626C44DB70061A02A /* YelpAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0BA281326C459FC0061A02A /* GPAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA281226C459FC0061A02A /* GPAPIService.swift */; };
+		B0BA281626C45AA30061A02A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0BA281526C45AA30061A02A /* Alamofire */; };
+		B0BA281926C45BA70061A02A /* GPAPIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA281826C45BA70061A02A /* GPAPIResource.swift */; };
+		B0BA281B26C4685C0061A02A /* GPSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA281A26C4685C0061A02A /* GPSearchService.swift */; };
+		B0BA281E26C46A080061A02A /* GPSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA281D26C46A080061A02A /* GPSearchResponse.swift */; };
+		B0BA282126C46D310061A02A /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA282026C46D310061A02A /* Business.swift */; };
+		B0BA282426C46F580061A02A /* AlamofireNetworkActivityLogger in Frameworks */ = {isa = PBXBuildFile; productRef = B0BA282326C46F580061A02A /* AlamofireNetworkActivityLogger */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,11 @@
 		B0BA274C26C44DB70061A02A /* YelpAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BA275126C44DB70061A02A /* YelpAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPITests.swift; sourceTree = "<group>"; };
 		B0BA275326C44DB70061A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BA281226C459FC0061A02A /* GPAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAPIService.swift; sourceTree = "<group>"; };
+		B0BA281826C45BA70061A02A /* GPAPIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPAPIResource.swift; sourceTree = "<group>"; };
+		B0BA281A26C4685C0061A02A /* GPSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchService.swift; sourceTree = "<group>"; };
+		B0BA281D26C46A080061A02A /* GPSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSearchResponse.swift; sourceTree = "<group>"; };
+		B0BA282026C46D310061A02A /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BA281626C45AA30061A02A /* Alamofire in Frameworks */,
+				B0BA282426C46F580061A02A /* AlamofireNetworkActivityLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +85,7 @@
 		B0BA274526C44DB70061A02A /* YelpAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B0BA281026C459850061A02A /* Source */,
 				B0BA274626C44DB70061A02A /* YelpAPI.h */,
 				B0BA274726C44DB70061A02A /* Info.plist */,
 			);
@@ -84,6 +99,50 @@
 				B0BA275326C44DB70061A02A /* Info.plist */,
 			);
 			path = YelpAPITests;
+			sourceTree = "<group>";
+		};
+		B0BA281026C459850061A02A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA281F26C46D200061A02A /* Model */,
+				B0BA281C26C469FE0061A02A /* Response */,
+				B0BA281726C45B9E0061A02A /* Endpoint */,
+				B0BA281126C4598A0061A02A /* Service */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B0BA281126C4598A0061A02A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA281226C459FC0061A02A /* GPAPIService.swift */,
+				B0BA281A26C4685C0061A02A /* GPSearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B0BA281726C45B9E0061A02A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA281826C45BA70061A02A /* GPAPIResource.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B0BA281C26C469FE0061A02A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA281D26C46A080061A02A /* GPSearchResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B0BA281F26C46D200061A02A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA282026C46D310061A02A /* Business.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +173,10 @@
 			dependencies = (
 			);
 			name = YelpAPI;
+			packageProductDependencies = (
+				B0BA281526C45AA30061A02A /* Alamofire */,
+				B0BA282326C46F580061A02A /* AlamofireNetworkActivityLogger */,
+			);
 			productName = YelpAPI;
 			productReference = B0BA274326C44DB70061A02A /* YelpAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -142,11 +205,13 @@
 		B0BA273A26C44DB70061A02A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GP;
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					B0BA274226C44DB70061A02A = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					B0BA274B26C44DB70061A02A = {
 						CreatedOnToolsVersion = 12.5;
@@ -162,6 +227,10 @@
 				Base,
 			);
 			mainGroup = B0BA273926C44DB70061A02A;
+			packageReferences = (
+				B0BA281426C45AA30061A02A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B0BA282226C46F580061A02A /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */,
+			);
 			productRefGroup = B0BA274426C44DB70061A02A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BA281E26C46A080061A02A /* GPSearchResponse.swift in Sources */,
+				B0BA281B26C4685C0061A02A /* GPSearchService.swift in Sources */,
+				B0BA281326C459FC0061A02A /* GPAPIService.swift in Sources */,
+				B0BA282126C46D310061A02A /* Business.swift in Sources */,
+				B0BA281926C45BA70061A02A /* GPAPIResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +415,7 @@
 		B0BA275826C44DB70061A02A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NCU6NYY7V3;
@@ -357,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.patrick.YelpAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +441,7 @@
 		B0BA275926C44DB70061A02A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = NCU6NYY7V3;
@@ -389,6 +466,7 @@
 		B0BA275B26C44DB70061A02A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NCU6NYY7V3;
 				INFOPLIST_FILE = YelpAPITests/Info.plist;
@@ -407,6 +485,7 @@
 		B0BA275C26C44DB70061A02A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NCU6NYY7V3;
 				INFOPLIST_FILE = YelpAPITests/Info.plist;
@@ -453,6 +532,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0BA281426C45AA30061A02A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		B0BA282226C46F580061A02A /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/konkab/AlamofireNetworkActivityLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0BA281526C45AA30061A02A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BA281426C45AA30061A02A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B0BA282326C46F580061A02A /* AlamofireNetworkActivityLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BA282226C46F580061A02A /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */;
+			productName = AlamofireNetworkActivityLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B0BA273A26C44DB70061A02A /* Project object */;
 }
