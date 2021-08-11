@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/trick/Documents/Work/Xcode/YelpDemo/YelpDemo/YelpAppDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YelpAPI/YelpAPI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YelpStorage/YelpStorage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:YelpDemo/../YelpUI/YelpUI.xcodeproj">
+   </FileRef>
+</Workspace>
