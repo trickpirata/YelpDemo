@@ -9,5 +9,5 @@ import Foundation
 
 public class GPSearchResponse: Codable {
     public let total: Int
-    public let businesses: [Business]
+    public let businesses: [GPBusiness]
 }

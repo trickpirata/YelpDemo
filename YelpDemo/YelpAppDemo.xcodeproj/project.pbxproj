@@ -8,13 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		B0BA270F26C44D520061A02A /* YelpDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA270E26C44D520061A02A /* YelpDemoApp.swift */; };
-		B0BA271126C44D520061A02A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA271026C44D520061A02A /* ContentView.swift */; };
 		B0BA271326C44D530061A02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BA271226C44D530061A02A /* Assets.xcassets */; };
 		B0BA271626C44D530061A02A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BA271526C44D530061A02A /* Preview Assets.xcassets */; };
 		B0BA272126C44D530061A02A /* YelpDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA272026C44D530061A02A /* YelpDemoTests.swift */; };
 		B0BA272C26C44D530061A02A /* YelpDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA272B26C44D530061A02A /* YelpDemoUITests.swift */; };
 		B0BA280A26C451D40061A02A /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = B0BA280926C451D40061A02A /* Stinsen */; };
 		B0BA280B26C451D40061A02A /* Stinsen in Embed Frameworks */ = {isa = PBXBuildFile; productRef = B0BA280926C451D40061A02A /* Stinsen */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B0BA282C26C5289E0061A02A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA282B26C5289E0061A02A /* HomeViewModel.swift */; };
+		B0BA282E26C528A70061A02A /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA282D26C528A70061A02A /* HomeContentView.swift */; };
+		B0BA283026C528B00061A02A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA282F26C528B00061A02A /* HomeCoordinator.swift */; };
+		B0BA283226C532FB0061A02A /* RestaurantListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA283126C532FB0061A02A /* RestaurantListContentView.swift */; };
+		B0BA283826C539450061A02A /* YelpAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BA283726C539450061A02A /* YelpAPI.framework */; };
+		B0BA283926C539450061A02A /* YelpAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0BA283726C539450061A02A /* YelpAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0BA283C26C53DD10061A02A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B0BA283B26C53DD10061A02A /* SDWebImageSwiftUI */; };
+		B0BA283F26C541880061A02A /* HomeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA283E26C541870061A02A /* HomeDetailsViewModel.swift */; };
+		B0BA284126C541910061A02A /* HomeDetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA284026C541910061A02A /* HomeDetailsContentView.swift */; };
+		B0BA284626C55B520061A02A /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = B0BA284526C55B520061A02A /* ActivityIndicatorView */; };
+		B0BA284A26C5869E0061A02A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA284926C5869E0061A02A /* MainCoordinator.swift */; };
+		B0BA284D26C5881F0061A02A /* SplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA284C26C5881F0061A02A /* SplashContentView.swift */; };
+		B0BA285026C59F240061A02A /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA284F26C59F240061A02A /* View+Extensions.swift */; };
+		B0BA285726C5BD270061A02A /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = B0BA285626C5BD270061A02A /* PartialSheet */; };
+		B0BA286F26C5C8AC0061A02A /* YelpUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BA286E26C5C8AC0061A02A /* YelpUI.framework */; };
+		B0BA287026C5C8AC0061A02A /* YelpUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0BA286E26C5C8AC0061A02A /* YelpUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0BA287226C5DC840061A02A /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA287126C5DC840061A02A /* MapItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +57,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B0BA287026C5C8AC0061A02A /* YelpUI.framework in Embed Frameworks */,
 				B0BA280B26C451D40061A02A /* Stinsen in Embed Frameworks */,
+				B0BA283926C539450061A02A /* YelpAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +69,6 @@
 /* Begin PBXFileReference section */
 		B0BA270B26C44D520061A02A /* YelpAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BA270E26C44D520061A02A /* YelpDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpDemoApp.swift; sourceTree = "<group>"; };
-		B0BA271026C44D520061A02A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0BA271226C44D530061A02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0BA271526C44D530061A02A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0BA271726C44D530061A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +78,18 @@
 		B0BA272726C44D530061A02A /* YelpAppDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpAppDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BA272B26C44D530061A02A /* YelpDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpDemoUITests.swift; sourceTree = "<group>"; };
 		B0BA272D26C44D530061A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0BA282B26C5289E0061A02A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B0BA282D26C528A70061A02A /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		B0BA282F26C528B00061A02A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B0BA283126C532FB0061A02A /* RestaurantListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListContentView.swift; sourceTree = "<group>"; };
+		B0BA283726C539450061A02A /* YelpAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YelpAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BA283E26C541870061A02A /* HomeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsViewModel.swift; sourceTree = "<group>"; };
+		B0BA284026C541910061A02A /* HomeDetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailsContentView.swift; sourceTree = "<group>"; };
+		B0BA284926C5869E0061A02A /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B0BA284C26C5881F0061A02A /* SplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContentView.swift; sourceTree = "<group>"; };
+		B0BA284F26C59F240061A02A /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		B0BA286E26C5C8AC0061A02A /* YelpUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YelpUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BA287126C5DC840061A02A /* MapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +97,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BA286F26C5C8AC0061A02A /* YelpUI.framework in Frameworks */,
+				B0BA285726C5BD270061A02A /* PartialSheet in Frameworks */,
+				B0BA284626C55B520061A02A /* ActivityIndicatorView in Frameworks */,
+				B0BA283C26C53DD10061A02A /* SDWebImageSwiftUI in Frameworks */,
 				B0BA280A26C451D40061A02A /* Stinsen in Frameworks */,
+				B0BA283826C539450061A02A /* YelpAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +130,7 @@
 				B0BA271F26C44D530061A02A /* YelpDemoTests */,
 				B0BA272A26C44D530061A02A /* YelpDemoUITests */,
 				B0BA270C26C44D520061A02A /* Products */,
+				B0BA283326C539330061A02A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,8 +147,11 @@
 		B0BA270D26C44D520061A02A /* YelpDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B0BA270E26C44D520061A02A /* YelpDemoApp.swift */,
-				B0BA271026C44D520061A02A /* ContentView.swift */,
+				B0BA282926C522190061A02A /* App */,
+				B0BA282726C521FB0061A02A /* View */,
+				B0BA282826C521FF0061A02A /* Model */,
+				B0BA282526C521E50061A02A /* Scene */,
+				B0BA282A26C522210061A02A /* Utilities */,
 				B0BA271226C44D530061A02A /* Assets.xcassets */,
 				B0BA271726C44D530061A02A /* Info.plist */,
 				B0BA271426C44D530061A02A /* Preview Content */,
@@ -147,6 +185,93 @@
 			path = YelpDemoUITests;
 			sourceTree = "<group>";
 		};
+		B0BA282526C521E50061A02A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA284926C5869E0061A02A /* MainCoordinator.swift */,
+				B0BA284B26C587730061A02A /* Splash */,
+				B0BA283D26C541730061A02A /* HomeDetails */,
+				B0BA282626C521EC0061A02A /* Home */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		B0BA282626C521EC0061A02A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA282B26C5289E0061A02A /* HomeViewModel.swift */,
+				B0BA282D26C528A70061A02A /* HomeContentView.swift */,
+				B0BA282F26C528B00061A02A /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B0BA282726C521FB0061A02A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA283126C532FB0061A02A /* RestaurantListContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0BA282826C521FF0061A02A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA287126C5DC840061A02A /* MapItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0BA282926C522190061A02A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA270E26C44D520061A02A /* YelpDemoApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B0BA282A26C522210061A02A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA284E26C59F140061A02A /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B0BA283326C539330061A02A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA286E26C5C8AC0061A02A /* YelpUI.framework */,
+				B0BA283726C539450061A02A /* YelpAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0BA283D26C541730061A02A /* HomeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA283E26C541870061A02A /* HomeDetailsViewModel.swift */,
+				B0BA284026C541910061A02A /* HomeDetailsContentView.swift */,
+			);
+			path = HomeDetails;
+			sourceTree = "<group>";
+		};
+		B0BA284B26C587730061A02A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA284C26C5881F0061A02A /* SplashContentView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B0BA284E26C59F140061A02A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0BA284F26C59F240061A02A /* View+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +291,9 @@
 			name = YelpAppDemo;
 			packageProductDependencies = (
 				B0BA280926C451D40061A02A /* Stinsen */,
+				B0BA283B26C53DD10061A02A /* SDWebImageSwiftUI */,
+				B0BA284526C55B520061A02A /* ActivityIndicatorView */,
+				B0BA285626C5BD270061A02A /* PartialSheet */,
 			);
 			productName = YelpDemo;
 			productReference = B0BA270B26C44D520061A02A /* YelpAppDemo.app */;
@@ -242,6 +370,9 @@
 			mainGroup = B0BA270226C44D520061A02A;
 			packageReferences = (
 				B0BA280826C451D40061A02A /* XCRemoteSwiftPackageReference "stinsen" */,
+				B0BA283A26C53DD00061A02A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				B0BA284426C55B520061A02A /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+				B0BA285526C5BD270061A02A /* XCRemoteSwiftPackageReference "PartialSheet" */,
 			);
 			productRefGroup = B0BA270C26C44D520061A02A /* Products */;
 			projectDirPath = "";
@@ -285,8 +416,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0BA271126C44D520061A02A /* ContentView.swift in Sources */,
+				B0BA282C26C5289E0061A02A /* HomeViewModel.swift in Sources */,
+				B0BA285026C59F240061A02A /* View+Extensions.swift in Sources */,
+				B0BA283026C528B00061A02A /* HomeCoordinator.swift in Sources */,
+				B0BA284D26C5881F0061A02A /* SplashContentView.swift in Sources */,
+				B0BA287226C5DC840061A02A /* MapItem.swift in Sources */,
 				B0BA270F26C44D520061A02A /* YelpDemoApp.swift in Sources */,
+				B0BA284126C541910061A02A /* HomeDetailsContentView.swift in Sources */,
+				B0BA282E26C528A70061A02A /* HomeContentView.swift in Sources */,
+				B0BA283226C532FB0061A02A /* RestaurantListContentView.swift in Sources */,
+				B0BA284A26C5869E0061A02A /* MainCoordinator.swift in Sources */,
+				B0BA283F26C541880061A02A /* HomeDetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +585,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YelpDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = NCU6NYY7V3;
+				DEVELOPMENT_TEAM = 59DTPWDE56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YelpDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -467,7 +607,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"YelpDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = NCU6NYY7V3;
+				DEVELOPMENT_TEAM = 59DTPWDE56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = YelpDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -616,6 +756,30 @@
 				minimumVersion = 1.0.11;
 			};
 		};
+		B0BA283A26C53DD00061A02A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+		B0BA284426C55B520061A02A /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.7;
+			};
+		};
+		B0BA285526C5BD270061A02A /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.12;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -623,6 +787,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B0BA280826C451D40061A02A /* XCRemoteSwiftPackageReference "stinsen" */;
 			productName = Stinsen;
+		};
+		B0BA283B26C53DD10061A02A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BA283A26C53DD00061A02A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		B0BA284526C55B520061A02A /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BA284426C55B520061A02A /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+		B0BA285626C5BD270061A02A /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0BA285526C5BD270061A02A /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

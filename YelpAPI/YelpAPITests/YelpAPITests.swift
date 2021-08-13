@@ -42,7 +42,9 @@ class YelpAPITests: XCTestCase {
                     XCTAssert(true)
                 }
             }, receiveValue: { response in
+                print(response.businesses)
                 XCTAssertNotNil(response)
+                XCTAssert(response.businesses.count > 0)
                 currencyCallExpectation.fulfill()
             })
 
@@ -67,10 +69,36 @@ class YelpAPITests: XCTestCase {
                     XCTAssert(true)
                 }
             }, receiveValue: { response in
+                print(response.businesses)
                 XCTAssertNotNil(response)
+                XCTAssert(response.businesses.count > 0)
                 currencyCallExpectation.fulfill()
             })
 
         waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func testGetBusinessDetails() {
+        NetworkActivityLogger.shared.startLogging()
+        let currencyCallExpectation = expectation(description: "Should display business detail")
+        cancellable = GPDetailsService
+            .getBusinessDetails(forID: "tH_fBsQME29Kn_8IQzdqGA")
+            .print()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTAssertNotNil(error.localizedDescription)
+                case .finished:
+                    XCTAssert(true)
+                }
+            }, receiveValue: { response in
+                print(response)
+                XCTAssertNotNil(response)
+                XCTAssertNotNil(response.name)
+                currencyCallExpectation.fulfill()
+            })
+
+        waitForExpectations(timeout: 10, handler: nil)
+        
     }
 }

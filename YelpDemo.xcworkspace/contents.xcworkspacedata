@@ -8,9 +8,6 @@
       location = "group:YelpAPI/YelpAPI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:YelpStorage/YelpStorage.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:YelpDemo/../YelpUI/YelpUI.xcodeproj">
    </FileRef>
 </Workspace>

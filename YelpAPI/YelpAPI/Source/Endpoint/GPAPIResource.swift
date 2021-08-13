@@ -17,6 +17,7 @@ struct CONFIG {
 public enum GPAPIResource {
     case searchByLocation(location: String, term: String?, sortBy: String?, radius: Double?, categories: String?)
     case searchByLatLong(latitude: Double, longitude: Double, term: String?, sortBy: String?, radius: Double?, categories: String?)
+    case getBusinessDetail(id: String)
 }
 
 extension GPAPIResource {
@@ -29,6 +30,8 @@ extension GPAPIResource {
         case .searchByLocation,
              .searchByLatLong:
             return "/businesses/search"
+        case .getBusinessDetail(let id):
+            return "/businesses/\(id)"
         }
     }
     
@@ -70,6 +73,8 @@ extension GPAPIResource {
                     }
                     return true
                 }
+        default:
+            return nil
         }
     }
     
