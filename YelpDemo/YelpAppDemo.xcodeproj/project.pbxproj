@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0210C0226C6A34D0008364D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0210C0126C6A34D0008364D /* Date+Extensions.swift */; };
 		B0BA270F26C44D520061A02A /* YelpDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BA270E26C44D520061A02A /* YelpDemoApp.swift */; };
 		B0BA271326C44D530061A02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BA271226C44D530061A02A /* Assets.xcassets */; };
 		B0BA271626C44D530061A02A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0BA271526C44D530061A02A /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B0210C0126C6A34D0008364D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B0BA270B26C44D520061A02A /* YelpAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BA270E26C44D520061A02A /* YelpDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpDemoApp.swift; sourceTree = "<group>"; };
 		B0BA271226C44D530061A02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				B0BA284F26C59F240061A02A /* View+Extensions.swift */,
+				B0210C0126C6A34D0008364D /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				B0BA283026C528B00061A02A /* HomeCoordinator.swift in Sources */,
 				B0BA284D26C5881F0061A02A /* SplashContentView.swift in Sources */,
 				B0BA287226C5DC840061A02A /* MapItem.swift in Sources */,
+				B0210C0226C6A34D0008364D /* Date+Extensions.swift in Sources */,
 				B0BA270F26C44D520061A02A /* YelpDemoApp.swift in Sources */,
 				B0BA284126C541910061A02A /* HomeDetailsContentView.swift in Sources */,
 				B0BA282E26C528A70061A02A /* HomeContentView.swift in Sources */,

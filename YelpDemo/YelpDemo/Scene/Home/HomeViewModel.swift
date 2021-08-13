@@ -128,7 +128,6 @@ class HomeViewModelImp: HomeViewModel {
                     self.isLoading = false
                 }
             } receiveValue: { [weak self] response in
-                print(response.businesses)
                 self?.businesses = response.businesses
             }.store(in: &cancelBag)
 

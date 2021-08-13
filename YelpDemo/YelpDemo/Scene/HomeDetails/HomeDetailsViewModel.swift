@@ -19,6 +19,7 @@ protocol HomeDetailsViewModel: ObservableObject {
     var distance: String { get }
     var businessDetails: GPBusinessDetails? { get }
     func getBusinessDetail()
+    func getHoursDetail() -> String
 }
 
 class HomeDetailsViewModelImp: HomeDetailsViewModel {
@@ -65,6 +66,31 @@ class HomeDetailsViewModelImp: HomeDetailsViewModel {
         self.businessMapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 0, longitude: 0), latitudinalMeters: 750, longitudinalMeters: 750)
     }
     
+    func getHoursDetail() -> String {
+        guard let businessDetail = businessDetails,
+              let hoursOpen = businessDetail.hours?.first?.open,
+              let day = Date().dayNumberOfWeek() else { return "" }
+        
+        if let currentHours = hoursOpen.first(where: { $0.day == (day - 1) } ),
+           let start = currentHours.start,
+           let end = currentHours.end {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HHmm"
+            
+            if let startTime = dateFormatter.date(from: start),
+               let endTime = dateFormatter.date(from: end) {
+                let timeFormatter = DateFormatter()
+                timeFormatter.dateFormat = "h:mm a"
+                
+                let startTimeString = timeFormatter.string(from: startTime)
+                let endTimeString = timeFormatter.string(from: endTime)
+                
+                return "\(startTimeString) - \(endTimeString)"
+            }
+        }
+        return ""
+    }
+    
     func getBusinessDetail() {
         guard let id = business.id else { return }
         isLoading = true
@@ -93,7 +119,7 @@ class HomeDetailsViewModelImp: HomeDetailsViewModel {
                                  is_closed: false,
                                  url: "https://www.yelp.com/biz/gary-danko-san-francisco?adjust_creative=wpr6gw4FnptTrk1CeT8POg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=wpr6gw4FnptTrk1CeT8POg",
                                  phone: "+14157492060",
-                                 display_phone: "(415) 749-2060", review_count: 5296, categories: [GPCategories(alias: nil, title: "American (New)"),GPCategories(alias: nil, title: "French"),GPCategories(alias: nil, title: "Wine Bars")], coordinates: nil, rating: 4.5, location: GPLocation(address1: nil, address2: nil, address3: nil, city: nil, zip_code: nil, country: nil, state: nil, display_address: ["800 N Point St", "San Francisco, CA 94109"], cross_streets: nil), photos: nil, price: "$", hours: [GPOperatingDetails(open: [GPOperationHours(is_overnight: false, start: "1730", end: "2200", day: 0)])])
+                                 display_phone: "(415) 749-2060", review_count: 5296, categories: [GPCategories(alias: nil, title: "American (New)"),GPCategories(alias: nil, title: "French"),GPCategories(alias: nil, title: "Wine Bars")], coordinates: nil, rating: 4.5, location: GPLocation(address1: nil, address2: nil, address3: nil, city: nil, zip_code: nil, country: nil, state: nil, display_address: ["800 N Point St", "San Francisco, CA 94109"], cross_streets: nil), photos: nil, price: "$", hours: [GPOperatingDetails(open: [GPOperationHours(is_overnight: false, start: "1730", end: "2200", day: 5)])])
     }
 }
 

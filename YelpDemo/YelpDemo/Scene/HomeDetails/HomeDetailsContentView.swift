@@ -60,21 +60,32 @@ struct HomeDetailsContentView<ViewModel>: View where ViewModel: HomeDetailsViewM
                         HStack {
                             HStack(spacing: 0) {
                                 let totalPrice = 4
-                                let businessPrice = viewModel.businessDetails?.price?.count ?? 0
+                                let businessPrice = viewModel.businessDetails?.price?.count ?? 1
                                 ForEach(0..<businessPrice, id: \.self) { count in
+                
                                     if let price = viewModel.businessDetails?.price,
                                        let priceFirst = price.first,
                                        let priceString = String(priceFirst) {
                                         Text(priceString)
                                             .font(.body)
                                             .foregroundColor(Color(style.color.primaryAppColor))
+                                    } else {
+                                        Text("$")
+                                            .font(.body)
+                                            .foregroundColor(Color(style.color.primaryAppColor))
                                     }
+                                    
+                                    
                                 }
                                 ForEach(0..<(totalPrice - businessPrice), id: \.self) { count in
                                     if let price = viewModel.businessDetails?.price,
                                        let priceFirst = price.first,
                                        let priceString = String(priceFirst) {
                                         Text(priceString)
+                                            .font(.body)
+                                            .foregroundColor(Color(style.color.customGray))
+                                    } else {
+                                        Text("$")
                                             .font(.body)
                                             .foregroundColor(Color(style.color.customGray))
                                     }
@@ -91,6 +102,13 @@ struct HomeDetailsContentView<ViewModel>: View where ViewModel: HomeDetailsViewM
                                 .compactMap { $0.title }
                                 .joined(separator: ", ")
                             Text(categories ?? "")
+                                .font(.body)
+                            Spacer()
+                        }.padding([.leading])
+                        
+                        //Hours
+                        HStack {
+                            Text(viewModel.getHoursDetail())
                                 .font(.body)
                             Spacer()
                         }.padding([.leading])

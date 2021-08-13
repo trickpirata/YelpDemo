@@ -11,7 +11,7 @@ The project is using Xcode workspace.
 - YelpUI contains shared styling and shared views
 
 # Quick Look
-[![YelpAPIDemo.gif](https://s6.gifyu.com/images/Screen-Recording-2021-08-13-at-8.28.24-PM.gif)](https://gifyu.com/image/yYr1)
+[![Screen-Recording-2021-08-13-at-8.28.24-PM.gif](https://s6.gifyu.com/images/Screen-Recording-2021-08-13-at-8.28.24-PM.gif)](https://gifyu.com/image/yYr1)
 
 # Technologies/Dependencies
 * Swift Package Manager - dependency management
